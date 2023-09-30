@@ -66,7 +66,6 @@ public class MathCalculator
             MessageBox.Show($"Error: {ex.Message}");
         }
     }
-
     private int OperatorPrecedence(string op)
     {
         switch (op)
@@ -81,7 +80,6 @@ public class MathCalculator
                 return 0;
         }
     }
-
     private double ApplyOperator(double a, double b, string op)
     {
         switch (op)
@@ -110,8 +108,6 @@ public class MathCalculator
                 throw new ArgumentException("Invalid operator");
         }
     }
-
-
     private void ShowResult(double res)
     {
         try

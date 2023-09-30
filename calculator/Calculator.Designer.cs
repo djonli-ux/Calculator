@@ -34,7 +34,7 @@
             btnMultiplication = new Button();
             btnSubtraction = new Button();
             btnSix = new Button();
-            BtnFive = new Button();
+            btnFive = new Button();
             btnFour = new Button();
             btnAddition = new Button();
             btnThree = new Button();
@@ -52,6 +52,7 @@
             btnClear = new Button();
             btnClear2 = new Button();
             btnClear3 = new Button();
+            field = new RichTextBox();
             SuspendLayout();
             // 
             // btnSeven
@@ -62,6 +63,7 @@
             btnSeven.TabIndex = 0;
             btnSeven.Text = "7";
             btnSeven.UseVisualStyleBackColor = true;
+            btnSeven.Click += NumberButton_Click;
             // 
             // btnEight
             // 
@@ -71,6 +73,7 @@
             btnEight.TabIndex = 1;
             btnEight.Text = "8";
             btnEight.UseVisualStyleBackColor = true;
+            btnEight.Click += NumberButton_Click;
             // 
             // btnNine
             // 
@@ -80,6 +83,7 @@
             btnNine.TabIndex = 2;
             btnNine.Text = "9";
             btnNine.UseVisualStyleBackColor = true;
+            btnNine.Click += NumberButton_Click;
             // 
             // btnMultiplication
             // 
@@ -107,15 +111,17 @@
             btnSix.TabIndex = 6;
             btnSix.Text = "6";
             btnSix.UseVisualStyleBackColor = true;
+            btnSix.Click += NumberButton_Click;
             // 
-            // BtnFive
+            // btnFive
             // 
-            BtnFive.Location = new Point(106, 432);
-            BtnFive.Name = "BtnFive";
-            BtnFive.Size = new Size(100, 56);
-            BtnFive.TabIndex = 5;
-            BtnFive.Text = "5";
-            BtnFive.UseVisualStyleBackColor = true;
+            btnFive.Location = new Point(106, 432);
+            btnFive.Name = "btnFive";
+            btnFive.Size = new Size(100, 56);
+            btnFive.TabIndex = 5;
+            btnFive.Text = "5";
+            btnFive.UseVisualStyleBackColor = true;
+            btnFive.Click += NumberButton_Click;
             // 
             // btnFour
             // 
@@ -125,6 +131,7 @@
             btnFour.TabIndex = 4;
             btnFour.Text = "4";
             btnFour.UseVisualStyleBackColor = true;
+            btnFour.Click += NumberButton_Click;
             // 
             // btnAddition
             // 
@@ -143,6 +150,7 @@
             btnThree.TabIndex = 10;
             btnThree.Text = "3";
             btnThree.UseVisualStyleBackColor = true;
+            btnThree.Click += NumberButton_Click;
             // 
             // btnTwo
             // 
@@ -152,6 +160,7 @@
             btnTwo.TabIndex = 9;
             btnTwo.Text = "2";
             btnTwo.UseVisualStyleBackColor = true;
+            btnTwo.Click += NumberButton_Click;
             // 
             // btnOne
             // 
@@ -161,6 +170,7 @@
             btnOne.TabIndex = 8;
             btnOne.Text = "1";
             btnOne.UseVisualStyleBackColor = true;
+            btnOne.Click += NumberButton_Click;
             // 
             // btnResult
             // 
@@ -170,6 +180,7 @@
             btnResult.TabIndex = 15;
             btnResult.Text = "=";
             btnResult.UseVisualStyleBackColor = true;
+            btnResult.Click += btnResult_Click;
             // 
             // btnDot
             // 
@@ -188,6 +199,7 @@
             btnZero.TabIndex = 13;
             btnZero.Text = "0";
             btnZero.UseVisualStyleBackColor = true;
+            btnZero.Click += NumberButton_Click;
             // 
             // btnNegative
             // 
@@ -270,11 +282,20 @@
             btnClear3.Text = "CL";
             btnClear3.UseVisualStyleBackColor = true;
             // 
+            // field
+            // 
+            field.Location = new Point(12, 12);
+            field.Name = "field";
+            field.Size = new Size(397, 219);
+            field.TabIndex = 24;
+            field.Text = "";
+            // 
             // Calculator
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(421, 622);
+            Controls.Add(field);
             Controls.Add(btnDivision);
             Controls.Add(btnSqrt);
             Controls.Add(btnExponentiation);
@@ -293,7 +314,7 @@
             Controls.Add(btnOne);
             Controls.Add(btnSubtraction);
             Controls.Add(btnSix);
-            Controls.Add(BtnFive);
+            Controls.Add(btnFive);
             Controls.Add(btnFour);
             Controls.Add(btnMultiplication);
             Controls.Add(btnNine);
@@ -312,7 +333,7 @@
         private Button btnMultiplication;
         private Button btnSubtraction;
         private Button btnSix;
-        private Button BtnFive;
+        private Button btnFive;
         private Button btnFour;
         private Button btnAddition;
         private Button btnThree;
@@ -330,5 +351,6 @@
         private Button btnClear;
         private Button btnClear2;
         private Button btnClear3;
+        private RichTextBox field;
     }
 }

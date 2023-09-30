@@ -91,8 +91,9 @@
             btnMultiplication.Name = "btnMultiplication";
             btnMultiplication.Size = new Size(100, 56);
             btnMultiplication.TabIndex = 3;
-            btnMultiplication.Text = "x";
+            btnMultiplication.Text = "*";
             btnMultiplication.UseVisualStyleBackColor = true;
+            btnMultiplication.Click += OperatorButton_Click;
             // 
             // btnSubtraction
             // 
@@ -102,6 +103,7 @@
             btnSubtraction.TabIndex = 7;
             btnSubtraction.Text = "-";
             btnSubtraction.UseVisualStyleBackColor = true;
+            btnSubtraction.Click += OperatorButton_Click;
             // 
             // btnSix
             // 
@@ -141,6 +143,7 @@
             btnAddition.TabIndex = 11;
             btnAddition.Text = "+";
             btnAddition.UseVisualStyleBackColor = true;
+            btnAddition.Click += OperatorButton_Click;
             // 
             // btnThree
             // 
@@ -216,8 +219,9 @@
             btnDivision.Name = "btnDivision";
             btnDivision.Size = new Size(100, 56);
             btnDivision.TabIndex = 23;
-            btnDivision.Text = "÷";
+            btnDivision.Text = "/";
             btnDivision.UseVisualStyleBackColor = true;
+            btnDivision.Click += OperatorButton_Click;
             // 
             // btnSqrt
             // 
@@ -227,6 +231,7 @@
             btnSqrt.TabIndex = 22;
             btnSqrt.Text = "√";
             btnSqrt.UseVisualStyleBackColor = true;
+            btnSqrt.Click += OperatorButton_Click;
             // 
             // btnExponentiation
             // 
@@ -234,8 +239,9 @@
             btnExponentiation.Name = "btnExponentiation";
             btnExponentiation.Size = new Size(100, 56);
             btnExponentiation.TabIndex = 21;
-            btnExponentiation.Text = "x^2";
+            btnExponentiation.Text = "^";
             btnExponentiation.UseVisualStyleBackColor = true;
+            btnExponentiation.Click += OperatorButton_Click;
             // 
             // btnDivRem
             // 
@@ -245,6 +251,7 @@
             btnDivRem.TabIndex = 20;
             btnDivRem.Text = "%";
             btnDivRem.UseVisualStyleBackColor = true;
+            btnDivRem.Click += OperatorButton_Click;
             // 
             // backSpace
             // 
@@ -254,6 +261,7 @@
             backSpace.TabIndex = 19;
             backSpace.Text = "←";
             backSpace.UseVisualStyleBackColor = true;
+            backSpace.Click += backSpace_Click;
             // 
             // btnClear
             // 
@@ -263,6 +271,7 @@
             btnClear.TabIndex = 18;
             btnClear.Text = "C";
             btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += btnClear_Click;
             // 
             // btnClear2
             // 
@@ -272,6 +281,7 @@
             btnClear2.TabIndex = 17;
             btnClear2.Text = "CE";
             btnClear2.UseVisualStyleBackColor = true;
+            btnClear2.Click += btnClear_Click;
             // 
             // btnClear3
             // 
@@ -281,9 +291,11 @@
             btnClear3.TabIndex = 16;
             btnClear3.Text = "CL";
             btnClear3.UseVisualStyleBackColor = true;
+            btnClear3.Click += btnClear_Click;
             // 
             // field
             // 
+            field.Font = new Font("Arial", 20F, FontStyle.Regular, GraphicsUnit.Point);
             field.Location = new Point(12, 12);
             field.Name = "field";
             field.Size = new Size(397, 219);
